@@ -4,7 +4,7 @@
 
 set dotenv-load
 
-pg-tag := '18.4-alpine3.23' # Should match the tag in `ci-cd.yml`
+pg-tag := '18.6-alpine3.24' # Should match the tag in `ci-cd.yml`
 
 ####################################################################################################
 # All checks to match CI
