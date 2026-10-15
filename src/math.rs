@@ -1,10 +1,10 @@
-pub fn try_add(x: i32, y: i32) -> Result<i32, String> {
+pub(crate) fn try_add(x: i32, y: i32) -> Result<i32, String> {
     x.checked_add(y)
         .ok_or_else(|| format!("Overflowed i32 adding {x} + {y}"))
 }
 
 /// Generates a random number in the range [0, max].
-pub fn random_number_le(max: u8) -> u8 { rand::random_range(0..=max) }
+pub(crate) fn random_number_le(max: u8) -> u8 { rand::random_range(0..=max) }
 
 #[cfg(test)]
 mod tests {
