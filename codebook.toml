@@ -1,4 +1,5 @@
 words = [
+    "buildx",
     "clippy",
     "direnv",
     "dotenv",
