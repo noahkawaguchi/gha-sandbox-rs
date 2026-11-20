@@ -51,7 +51,7 @@ test-clean:
 
 # Lint with Clippy (denying warnings)
 lint *ARGS:
-    cargo clippy --workspace --all-targets {{ ARGS }} -- --deny warnings
+    CARGO_BUILD_WARNINGS=deny cargo clippy --workspace --all-targets {{ ARGS }}
 
 # Lint for aarch64-unknown-linux-gnu, x86_64-unknown-linux-gnu, and aarch64-apple-darwin
 lint-targets: (lint '--target' 'aarch64-unknown-linux-gnu') \
